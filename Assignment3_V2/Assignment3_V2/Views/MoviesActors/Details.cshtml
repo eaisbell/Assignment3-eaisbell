@@ -1,0 +1,40 @@
+﻿@model Assignment3_V2.Models.MoviesActors
+
+@{
+    ViewData["Title"] = "Details";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h1 style="color: black;">Details</h1>
+
+</div>
+<style>
+    body {
+        background-image: url('https://static.vecteezy.com/system/resources/previews/000/631/634/original/green-grid-mosaic-background-creative-design-templates-vector.jpg');
+    }
+</style>
+
+
+
+<div>
+    <h4>MoviesActors</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Movie
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Movie.Title)
+        </dd>
+        <dt class="col-sm-2">
+            Actor
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Actor.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.MoviesActorsId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
